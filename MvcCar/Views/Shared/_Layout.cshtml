@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <style>wrapper{width: 800px;
+    margin:auto;}
+    </style>
+</head>
+<body>
+    <h1>Cars</h1>
+    <div id="wrapper">
+        <h2>@ViewBag.UnderTitle</h2>
+        <ul>
+            <li><a asp-controller="Cars" asp-action="Create">Create a new Car</a></li>
+            <li><a asp-controller="Cars" asp-action="Index" >Go back to start page</a></li>
+        </ul>
+        <h3>Current Cars:</h3>
+        
+        @RenderBody()
+    </div>
+    <footer>
+        <p>Posted by: Fanny Sandberg</p>
+        <div>&copy; Fanny Sandberg</div>
+    </footer>
+</body>
+</html>

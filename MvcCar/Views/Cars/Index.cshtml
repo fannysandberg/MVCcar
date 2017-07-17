@@ -1,0 +1,20 @@
+﻿@model CarsIndexVM[]
+@{
+}
+
+<ul>
+    @foreach (var car in Model)
+    {
+
+        if (car.ShowAsFast)
+        {
+            <li style="color:royalblue">@car.Brand</li>
+        }
+
+        else
+        {
+            <li>@car.Brand</li>
+        }
+
+    }
+</ul>
