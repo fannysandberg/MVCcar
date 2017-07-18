@@ -11,10 +11,16 @@ namespace MvcCar.Controllers
 {
     public class CarsController : Controller
     {
-        // GET: /<controller>/
+        MvcCarContext context;
+
+        public CarsController(MvcCarContext context)
+        {
+            this.context = context;
+        }
+
         public IActionResult Index()
         {
-            return View(DataManager.ListCars());
+            return View(context.ListCars());
         }
 
         [HttpGet]
@@ -29,7 +35,7 @@ namespace MvcCar.Controllers
             if(!ModelState.IsValid)
             return View();
 
-            DataManager.AddCar(car);
+            context.AddCar(car);
             return RedirectToAction(nameof(Index));
 
 

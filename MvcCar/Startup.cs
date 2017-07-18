@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using MvcCar.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace MvcCar
 {
@@ -16,6 +18,8 @@ namespace MvcCar
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            var connString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=MvcCarDB;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            services.AddDbContext<MvcCarContext>(o => o.UseSqlServer(connString));
             services.AddMvc();
         }
 
