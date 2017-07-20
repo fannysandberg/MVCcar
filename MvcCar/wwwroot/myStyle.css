@@ -1,0 +1,84 @@
+﻿body {
+    background-image: url('images/aidan-meyer-129878.jpg');
+    background-size: cover;
+    font-family: ColaborateLight;
+}
+
+#wrapper {
+    margin: auto;
+    width: 800px;
+    background-color: white;
+    border-radius: 25px;
+    padding-left: 40px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+#wrapper ul {
+
+    list-style-type: none;
+    color:#B25754
+}
+    #wrapper form {
+        #FFAEAB;
+    }
+
+#logo {
+    float: right;
+}
+
+h1 {
+    font-family: Arsenal;
+    font-size: 48px;
+    color: #B25754;
+}
+
+h2 {
+    font-family: Arsenal;
+    color: #B25754;
+}
+
+h3 {
+    font-family: Arsenal;
+    color: #B25754
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.tabs {
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+    background: #FFAEAB;
+}
+
+    .tabs ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    .tabs li {
+        display: inline;
+        padding:5px;
+    }
+
+        .tabs li a {
+            float: left;
+            display: block;
+            text-decoration: none;
+            padding: 5px;
+        }
+
+            .tabs li a:visited {
+                color: #B25754;
+            }
+
+            .tabs li a:hover, .tabs li.selected a {
+                background: #B25754;
+                color:white;
+            }

@@ -32,6 +32,7 @@ namespace MvcCar
             }
 
             app.UseMvcWithDefaultRoute();
+            app.UseStaticFiles();
 
         }
             
